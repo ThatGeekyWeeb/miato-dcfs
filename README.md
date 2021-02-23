@@ -1,5 +1,5 @@
 # Miato
-Miato is a bot'ed regular old account, using [dcfs](github.com/diamondburned/dcfs)  
+Miato is a bot'ed regular old account, using [dcfs](https://github.com/diamondburned/dcfs)  
 The 'private' code info has been removed, for my safety `:^)`
 # Custom color roles
 Miato's custom color roles is it's main feature.  
