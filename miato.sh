@@ -1,6 +1,6 @@
 #!/bin/bash
-server=""
-miato="mnt/$server/miato"
+server="Not horny? Cringe"
+miato="/home/mia/git/dcfs/mnt/$server/miato"
 while sleep 2; do
 cli() {
        echo $(tac "$miato" | tail  -1 | cut -d',' -f3 | grep '^~M')
@@ -29,7 +29,9 @@ if $(tac "$miato" | tail  -1 | cut -d',' -f3 | grep -q '~M'); then
 			echo "Please do not chat here, the code breaks if there are 15 msgs/lines of msgs" >> "$miato"
 			;;
 		quote)
-			fortune /usr/share/fortunes/$(echo $(cli) | sed -e 's/.*<@!//g' -e 's/>//g') >> "$miato"
+			fortune "/usr/share/fortunes/$(echo $(cli) | sed -e 's/.*<@!//g' -e 's/>//g')" >> "$miato" || {
+				fortune >> "$miato"
+			}
 			;;
 		mkq)
 			id=$(tac "$miato" | tail -1 | cut -d',' -f1)
@@ -39,7 +41,7 @@ if $(tac "$miato" | tail  -1 | cut -d',' -f3 | grep -q '~M'); then
 			echo "Quote made under <@!$id>" >> "$miato"
 			;;
 		help)
-			echo "~purge all" >> "$miato"
+			#echo "~purge all" >> "$miato"
 			cat << 'EOF' >> "$miato"
 ```text
 Miato: A regular user, with a scripted client, running on Mia's laptop
