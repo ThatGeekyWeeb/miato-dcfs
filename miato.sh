@@ -1,5 +1,5 @@
 #!/bin/bash
-server="Not horny? Cringe"
+server=""
 miato="/home/mia/git/dcfs/mnt/$server/miato"
 while sleep 2; do
 cli() {
@@ -44,7 +44,7 @@ if $(tac "$miato" | tail  -1 | cut -d',' -f3 | grep -q '~M'); then
 			#echo "~purge all" >> "$miato"
 			cat << 'EOF' >> "$miato"
 ```text
-Miato: A regular user, with a scripted client, running on Mia's laptop
+Miato: A bot running on Mia's laptop
 Usage: ~M<FUNC> [EX] - I.E: ~Mcolor <HEX>
 	Syntax: 
 		<>: Required
@@ -56,8 +56,7 @@ quote: Grab a quote from fortune or find a quote from @PING (~Mquote [@PING])
 mkq: Create a quote under your PING (~Mmkq <quote>)
 help: That prints this swilly uwu (~Mhelp)
 ***
-	Notes: Miato violates TOS
-	       Miato uses Carl-Bot as a text interface to role managment
+	~ Miato uses Carl-Bot as a text interface to role managment
 ***
 ```
 EOF
