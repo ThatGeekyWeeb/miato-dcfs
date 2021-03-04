@@ -1,4 +1,4 @@
 [submodule "dcfs"]
 	path = dcfs
-	url = https://github.com/ThatGeekyWeeb/dcfs
+	url = https://github.com/diamondburned/dcfs
 	branch = master
